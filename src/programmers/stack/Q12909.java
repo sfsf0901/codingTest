@@ -10,16 +10,17 @@ public class Q12909 {
         System.out.println(solution(")()("));
     }
 
+    // 시간 복잡도: O(n)
     static boolean solution(String s) {
         ArrayDeque<Character> stack = new ArrayDeque<>();
         for (char c : s.toCharArray()) {
             switch (c) {
-                case '(' -> stack.push(c);
+                case '(' -> stack.push(c); // O(1)
                 case ')' -> {
                     if (stack.isEmpty()) {
                         return false;
                     }
-                    stack.pop();
+                    stack.pop(); // O(1)
                 }
             }
         }
@@ -27,6 +28,7 @@ public class Q12909 {
         return stack.isEmpty();
     }
 
+    // 시간 복잡도: O(n)
     static boolean solution2(String s) {
         boolean answer = true;
         Stack<Character> stack = new Stack<>();
@@ -50,6 +52,7 @@ public class Q12909 {
         return answer;
     }
 
+    // 시간 복잡도: O(n)
     static boolean solution3(String s) {
         Stack<Character> stack = new Stack<>();
 
