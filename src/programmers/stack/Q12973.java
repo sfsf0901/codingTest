@@ -9,6 +9,7 @@ public class Q12973 {
         System.out.println(solution("cdcd"));
     }
 
+    // 시간 복잡도: O(n)
     static int solution(String s) {
 
         ArrayDeque<Character> stack = new ArrayDeque<>();
@@ -20,15 +21,10 @@ public class Q12973 {
             }
         }
 
-        if (stack.isEmpty()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return stack.isEmpty() ? 1 : 0;
 
         // stack이 비어 있거나, 제일 최근 입력된 값과 같지 않다면 값 저장
-        // 그냥 pop 안되는 상황이면 push 하는게 나으려나?
-
+        // 그냥 pop 안되는 상황이면 push 하는게 나으려나? -> yes
         // stack 비어 있으면 1, 아니면 0
     }
 }
