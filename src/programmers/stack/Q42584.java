@@ -13,7 +13,7 @@ public class Q42584 {
 //        System.out.println(Arrays.toString(answer2));
     }
 
-    // 시간 복잡도: O(2n) -> O(n)
+    // 시간 복잡도: O(4n) -> O(n)
     // solution2 개선
     static int[] solution(int[] prices) {
         int length = prices.length;
