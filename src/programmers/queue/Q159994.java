@@ -27,6 +27,7 @@ public class Q159994 {
         int cardIdx1 = 0;
         int cardIdx2 = 0;
 
+        // O(N)
         for (int i = 0; i < goal.length; i++) {
             String target = goal[i];
 
@@ -45,11 +46,14 @@ public class Q159994 {
 
     private static String solution2(String[] cards1, String[] cards2, String[] goal) {
 
+        // O(N)
         ArrayDeque<String> queue1 = new ArrayDeque<>(Arrays.asList(cards1));
+        // O(N)
         ArrayDeque<String> queue2 = new ArrayDeque<>(Arrays.asList(cards2));
 
         boolean result = true;
 
+        // O(N)
         for (String word : goal) {
             if (!queue1.isEmpty() && queue1.peek().equals(word)) {
                 queue1.poll();
