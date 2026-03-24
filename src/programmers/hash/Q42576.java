@@ -11,6 +11,7 @@ public class Q42576 {
         ));
     }
 
+    // O(N)
     private static String solution(String[] participant, String[] completion) {
 
         // 동명이인 가능
