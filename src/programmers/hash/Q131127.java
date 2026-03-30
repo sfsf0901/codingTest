@@ -75,7 +75,6 @@ public class Q131127 {
         return answer;
     }
 
-
     // O(N*M)
     private static int solution2(String[] want, int[] number, String[] discount) {
 
