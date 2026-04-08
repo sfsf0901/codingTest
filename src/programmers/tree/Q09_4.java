@@ -10,6 +10,7 @@ public class Q09_4 {
         )));
     }
 
+    // 시간 복잡도: O(N)
     private static String[] solution(int[] nodes) {
         // 전위, 중위, 후위 순회 결과 반환
         String[] answer = new String[3];
