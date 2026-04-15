@@ -19,12 +19,15 @@ public class Q77486 {
     private static HashMap<String, String> pair = new HashMap<>();
     private static HashMap<String, Integer> result = new HashMap<>();
 
+    // 시간 복잡도: O(M * log(amount))
     private static int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {
 
+        // O(N)
         for (int i = 0; i < enroll.length; i++) {
             pair.put(enroll[i], referral[i]);
         }
 
+        // O(M)
         for (int i = 0; i < seller.length; i++) {
             calculate(seller[i], amount[i] * 100);
         }
@@ -52,6 +55,8 @@ public class Q77486 {
         calculate(pair.get(seller), share);
     }
 
+    // 프로그래머스 풀이
+    // 시간 복잡도: O(M * log(amount))
     private static int[] solution2(String[] enroll, String[] referral, String[] seller, int[] amount) {
         HashMap<String, String> parent = new HashMap<>();
         for (int i = 0; i <enroll.length; i++) {
