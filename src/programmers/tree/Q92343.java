@@ -48,7 +48,7 @@ public class Q92343 {
                 set.remove(next);
 
                 if (info[next] == 1) {
-                    if (now.sheep != now.wolf + 1) {
+                    if (now.sheep > now.wolf + 1) {
                         queue.add(new Info(next, now.sheep, now.wolf + 1, set));
                     }
                 } else {
